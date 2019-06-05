@@ -1,0 +1,12 @@
+<div style="height: 100%">
+  <button (click)="printReport()" mat-button>Guardar</button>
+  <div style="height: 100%" id="myReport">
+    <ngx-powerbi-component type="report"
+                           [id]="report?.id"
+                           [embedUrl]="report?.embedUrl"
+                           tokenType="Embed"
+                           [accessToken]="report?.accessToken"
+                           on-embedded="onEmbedded($event)">
+    </ngx-powerbi-component>
+  </div>
+</div>
